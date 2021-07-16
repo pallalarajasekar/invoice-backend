@@ -34,7 +34,7 @@ const registerUser = async (firstname, lastname, email, password, role) => {
                 }
             });
             var shrt_url;
-            shortUrl.short(`http://localhost:4200/active/${email}`, function (err, url) {
+            shortUrl.short(`https://elegant-davinci-232208.netlify.app/active/${email}`, function (err, url) {
                 shrt_url = url;
                 console.log(shrt_url);
                 let info = mailer.sendMail({
@@ -128,7 +128,7 @@ const forgotPassword = async (email) => {
             to: checkEmail.email, // list of receivers
             subject: "Password Reset ✔", // Subject line
             text: "Password Reset Ramdom String",  // plain text body
-            html: `<a href="http://localhost:4200/reset/${email}/${string}">Click on this link</a>`,
+            html: `<a href="https://elegant-davinci-232208.netlify.app/${email}/${string}">Click on this link</a>`,
         });
         console.log("------------->" + string);
         console.log("=============>" + checkEmail.email);
