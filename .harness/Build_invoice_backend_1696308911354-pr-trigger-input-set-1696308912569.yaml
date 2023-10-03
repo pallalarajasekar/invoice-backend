@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_invoice_backend_1696308911354-pr-trigger-input-set
+  identifier: Build_invoice_backend_1696308911354prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_invoice_backend_1696308911354
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
